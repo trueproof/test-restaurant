@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <script src="dish.js"></script>
+    <script src="order.js"></script>
+    <script src="waiter.js"></script>
+    <script src="restaurant.js"></script>
+    <script src="restaurant.test.js"></script>
+</head>
+<body>
+    <h4>waiter: <input type="number" min="1" max="2" id="type" value="1" /></h4>
+    <ul id="dishes">
+        <li>
+            <input type="text" placeholder="dish" data-type="dish"/>
+            <button data-type="add">add</button>
+            <ul data-type="spices">
+                <li>
+                    <input type="text" placeholder="spice" data-type="spice"/>
+                    <button data-type="add">add</button>
+                </li>
+                <li>
+                    <input type="text" placeholder="spice" data-type="spice"/>
+                    <button data-type="add">add</button>
+                </li>
+                <li>
+                    <input type="text" placeholder="spice" data-type="spice"/>
+                    <button data-type="add">add</button>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <input type="text" placeholder="dish" data-type="dish"/>
+            <button data-type="add">add</button>
+            <ul data-type="spices">
+                <li>
+                    <input type="text" placeholder="spice" data-type="spice"/>
+                    <button data-type="add">add</button>
+                </li>
+                <li>
+                    <input type="text" placeholder="spice" data-type="spice"/>
+                    <button data-type="add">add</button>
+                </li>
+                <li>
+                    <input type="text" placeholder="spice" data-type="spice"/>
+                    <button data-type="add">add</button>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <input type="text" placeholder="dish" data-type="dish"/>
+            <button data-type="add">add</button>
+            <ul data-type="spices">
+                <li>
+                    <input type="text" placeholder="spice" data-type="spice"/>
+                    <button data-type="add">add</button>
+                </li>
+                <li>
+                    <input type="text" placeholder="spice" data-type="spice"/>
+                    <button data-type="add">add</button>
+                </li>
+                <li>
+                    <input type="text" placeholder="spice" data-type="spice"/>
+                    <button data-type="add">add</button>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <button id="get-waiter">get waiter</button>
+    <button id="cancel">cancel</button>
+    <h4>your order:</h4>
+    <div id="order"></div>
+    <h4>waiter says:</h4>
+    <div id="message"></div>
+    <script src="main.js"></script>
+</body>
+</html>
