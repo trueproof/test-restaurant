@@ -6,12 +6,9 @@ try {
 
 const waiterOfType = {
     1: class extends Waiter {
-        constructor (tp, say = (msg) => {}) {
-            if (!(tp in waiterOfType)) {
-                throw new Error (`not allowed type: ${tp}`)
-            }
+        constructor (say = (msg) => {}) {
             super()
-            this.type = tp
+            this.type = 1
             this.say = say
         }
         cancel () {
@@ -34,12 +31,9 @@ const waiterOfType = {
         }
     },
     2: class extends Waiter {
-        constructor (tp, say = (msg) => {}) {
-            if (!(tp in waiterOfType)) {
-                throw new Error (`not allowed type: ${tp}`)
-            }
+        constructor (say = (msg) => {}) {
             super()
-            this.type = tp
+            this.type = 2
             this.say = say
         }
         cancel () {
@@ -58,7 +52,7 @@ const waiterOfType = {
     },
 }
 
-const createWaiter = (say) => (type) => new waiterOfType[type](type, say)
+const createWaiter = (say) => (type) => new waiterOfType[type](say)
 
 try {
     module.exports = { createWaiter }
